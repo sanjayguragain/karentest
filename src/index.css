@@ -1,0 +1,58 @@
+:root {
+  font-family: "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --title-font: "Iowan Old Style", "Palatino", "Georgia", serif;
+  --ink: #171717;
+  --muted: rgba(23, 23, 23, 0.62);
+  --accent: #f3c166;
+  --accent-dark: #8b4b1f;
+  --canvas: #f6f0e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #fbe7c4 0%, #f7efe4 35%, #efe7dc 70%);
+  color: var(--ink);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background: radial-gradient(circle at 15% 15%, rgba(240, 155, 108, 0.35), transparent 55%),
+    radial-gradient(circle at 85% 20%, rgba(120, 175, 196, 0.35), transparent 60%),
+    radial-gradient(circle at 60% 80%, rgba(240, 209, 140, 0.4), transparent 65%);
+  opacity: 0.9;
+}
+
+body::after {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Ccircle cx='1' cy='1' r='1' fill='rgba(0,0,0,0.05)'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+}
+
+a {
+  text-decoration: none;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
